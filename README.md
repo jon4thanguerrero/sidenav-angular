@@ -26,9 +26,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Pasos para inicializar el proyecto
+## Pasos para inicializar el proyecto (Desde 0)
 
 - ng new sidenav-app --standalone --routing
 - cd sidenav-app
 - ng add @angular/material
 - ng serve
+
+## Pasos inicializar existente
+
+- descargar el repositorio
+- si no tiene descargado angular-material: ng add @angular/material
+- ingresar al proyecto y ejecutar: npm install
