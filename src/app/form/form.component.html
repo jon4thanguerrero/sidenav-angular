@@ -1,0 +1,23 @@
+<div class="full-page-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name" placeholder="Ingresa tu nombre" />
+        <mat-error *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+          El nombre es requerido
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput formControlName="email" placeholder="Ingresa tu correo electrónico" />
+        <mat-error *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          Introduce un correo válido
+        </mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        Enviar
+      </button>
+    </form>
+  </div>
